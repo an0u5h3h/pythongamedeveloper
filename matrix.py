@@ -35,3 +35,7 @@ for i in range(len(matrix)):     # for loop for row
 #9. print all values in the first colum using a loop 
 for i in range(len(matrix)):
     print(matrix[i][0])
+
+#10. print the diagonal entries
+for i in range(len(matrix)):
+    print(matrix[i][i])
