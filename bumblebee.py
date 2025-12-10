@@ -22,3 +22,25 @@ def place():
 def timeUp():
     global gameOver         #if its not global, the value can not be access outside the function
     gameOver=True
+
+def update():
+    global score
+    if keyboard.left:
+        bee.x=bee.x-2
+    elif keyboard.right:
+        bee.x=bee.x+2
+    elif keyboard.up:
+        bee.y=bee.y-2
+    elif keyboard.down:
+        bee.y=bee.y+2
+    
+    flowerCollected=bee.colliderect(flower)  #checking collision
+    if flowerCollected==True:
+        score=score+1
+        place() 
+    
+clock.schedule(timeUp, 180.0) 
+pgzrun.go()
+        
+
+
