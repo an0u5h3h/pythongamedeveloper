@@ -1,0 +1,20 @@
+group_records = ()
+for i in range(1):
+    print("enter the group details:")
+    groupname = input("group Name: ")
+    sizeofthegroup = input("size of the group: ")
+    dateofthecompetition = input("date of the competition: ")
+    venue = input("venue: ")
+    typeofthemedal = input("type of medal: ")
+
+    record=(groupname,sizeofthegroup, dateofthecompetition,venue,typeofthemedal)
+    group_records=group_records+(record)
+
+print("the group records, but stored as tuples: ")
+
+for i in range(5):
+    print("Group Name:", group_records[i])
+    print("Size:", group_records[i])
+    print("Date:", group_records[i])
+    print("Venue:", group_records[i])
+    print("Medal:", group_records[i])    #tuple is only one index
